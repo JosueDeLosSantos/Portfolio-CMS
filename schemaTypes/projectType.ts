@@ -5,7 +5,7 @@ export default defineType({
   title: 'Project',
   type: 'document',
   groups: [
-    {name: 'details', title: 'Details'},
+    {name: 'details', title: 'Details', default: true},
     {name: 'assets', title: 'assets'},
   ],
   fieldsets: [{name: 'dates', title: 'Dates', options: {columns: 2}}],
@@ -27,16 +27,9 @@ export default defineType({
     defineField({
       name: 'framework',
       title: 'Framework',
-      type: 'string',
+      type: 'reference',
       group: 'details',
-      options: {
-        list: [
-          {title: 'Next.js', value: 'Next.js'},
-          {title: 'React', value: 'React'},
-          {title: 'JavaScript', value: 'JavaScript'},
-        ],
-        layout: 'radio',
-      },
+      to: [{type: 'framework'}],
       validation: (Rule) => Rule.required(),
     }),
 
