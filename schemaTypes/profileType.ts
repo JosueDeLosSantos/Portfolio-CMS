@@ -31,6 +31,11 @@ export default defineType({
       type: 'file',
     }),
     defineField({
+      name: 'spanishCv',
+      title: 'Spanish-CV',
+      type: 'file',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
