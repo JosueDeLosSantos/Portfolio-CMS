@@ -32,6 +32,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'spanishCertificationLink',
+      title: 'Spanish Certification Link',
+      type: 'url',
+      group: 'assets',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'startDate',
       title: 'Start Date',
       type: 'date',
