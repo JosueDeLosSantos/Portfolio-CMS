@@ -22,8 +22,9 @@ export default defineType({
       title: 'Description',
       type: 'text',
       group: 'details',
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.required().max(400).error('No more than 400 characters'),
     }),
+
     defineField({
       name: 'certificationLink',
       title: 'Certification Link',
