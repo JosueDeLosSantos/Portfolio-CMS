@@ -81,6 +81,15 @@ export default defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'video',
+      title: 'Video',
+      type: 'file',
+      group: 'assets',
+      options: {
+        accept: 'video/*',
+      },
+    }),
   ],
   //   preview: {
   //     select: {
